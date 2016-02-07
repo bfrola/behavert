@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{472A29F3-4F6D-48ED-B34E-703A9D528F03}</ProjectGuid>
+    <RootNamespace>opensteer</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)Samples\OpensteerDemo\win32\bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)Samples\OpensteerDemo\win32\obj\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)Samples\OpensteerDemo\win32\bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)Samples\OpensteerDemo\win32\obj\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;..\include\Opensteer;C:\Programmi\Microsoft Platform SDK\Include\mfc;$(SolutionDir)PlugIns;$(SolutionDir)Core\include;C:\Programmi\Microsoft Platform SDK\Include;$(NVSDKCUDA_ROOT)\common\inc;C:\CUDA\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>user32.lib;cudart.lib;cutil32.lib;glew32.lib;glut32.lib;BehaveRT.lib;EnvGrid3D.lib;Drawable3D.lib;OpenSteerWrapper.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>"$(OutDir)BehaveRT_OpenSteerDemo.exe"</OutputFile>
+      <AdditionalLibraryDirectories>$(NVSDKCUDA_ROOT)\common\lib;$(ProjectDir)\lib;$(OutDir);c:\CUDA\lib;C:\Programmi\Microsoft Platform SDK\Lib;$(SolutionDir)\lib\win32\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>..\include;..\include\Opensteer;C:\Programmi\Microsoft Platform SDK\Include\mfc;$(SolutionDir)PlugIns;$(SolutionDir)Core\include;C:\Programmi\Microsoft Platform SDK\Include;$(NVSDKCUDA_ROOT)\common\inc;$(CUDA_INC_PATH);$(CUDPP_PATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>user32.lib;cudart.lib;cutil32.lib;glew32.lib;glut32.lib;BehaveRT.lib;EnvGrid3D.lib;Drawable3D.lib;OpenSteerWrapper.lib;cUtil32.lib;shrUtils32.lib;cudpp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>"$(OutDir)BehaveRT_OpenSteerDemo.exe"</OutputFile>
+      <AdditionalLibraryDirectories>$(NVSDKCUDA_ROOT)\common\lib;$(ProjectDir)\lib;$(OutDir);$(CUDA_LIB_PATH);C:\Programmi\Microsoft Platform SDK\Lib;$(SolutionDir)\lib\win32\$(Configuration);$(NVSDKCOMPUTE_ROOT)\shared\lib;D:\Utenti\Bernardino\Documenti\Progetti\cudpp_src_1.1.1\bin\win32\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile>"$(TargetDir)$(TargetName).pdb"</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Manifest>
+      <OutputManifestFile>"$(IntDir)$(TargetFileName).embed.manifest"</OutputManifestFile>
+    </Manifest>
+    <ManifestResourceCompile>
+      <ResourceOutputFileName>"$(IntDir)$(TargetFileName).embed.manifest.res"</ResourceOutputFileName>
+    </ManifestResourceCompile>
+    <Bscmake>
+      <OutputFile>"$(OutDir)$(ProjectName).bsc"</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\OpenSteerDemo.cpp" />
+    <ClCompile Include="..\src\UserInteraction.cpp" />
+    <ClCompile Include="..\src\Camera.cpp" />
+    <ClCompile Include="..\src\Clock.cpp" />
+    <ClCompile Include="..\src\Draw.cpp" />
+    <ClCompile Include="..\src\lq.c" />
+    <ClCompile Include="..\src\Pathway.cpp" />
+    <ClCompile Include="..\src\PlugIn.cpp" />
+    <ClCompile Include="..\src\SimpleVehicle.cpp" />
+    <ClCompile Include="..\src\Vec3.cpp" />
+    <ClCompile Include="..\plugins\BehaveRT_Clustering.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OpenSteerDemo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\include\UserInteraction.h" />
+    <ClInclude Include="..\include\OpenSteer\AbstractVehicle.h" />
+    <ClInclude Include="..\include\OpenSteer\Annotation.h" />
+    <ClInclude Include="..\include\OpenSteer\Camera.h" />
+    <ClInclude Include="..\include\OpenSteer\Clock.h" />
+    <ClInclude Include="..\include\OpenSteer\Draw.h" />
+    <ClInclude Include="..\include\OpenSteer\LocalSpace.h" />
+    <ClInclude Include="..\include\OpenSteer\lq.h" />
+    <ClInclude Include="..\include\OpenSteer\Obstacle.h" />
+    <ClInclude Include="..\include\OpenSteer\OpenSteerDemo.h" />
+    <ClInclude Include="..\include\OpenSteer\Pathway.h" />
+    <ClInclude Include="..\include\OpenSteer\PlugIn.h" />
+    <ClInclude Include="..\include\OpenSteer\Proximity.h" />
+    <ClInclude Include="..\include\OpenSteer\SimpleVehicle.h" />
+    <ClInclude Include="..\include\OpenSteer\SteerLibrary.h" />
+    <ClInclude Include="..\include\OpenSteer\Utilities.h" />
+    <ClInclude Include="..\include\OpenSteer\Vec3.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\BehaveRT.vcxproj">
+      <Project>{ccea2cb4-7801-10d0-9e55-ef6575bfcd0d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\PlugIns\EnvGrid3D\EnvGrid3D.vcxproj">
+      <Project>{aba18b63-4e36-b458-66ee-3d7028d0bd21}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="steertest.vcxproj">
+      <Project>{472a29f3-4f6d-48ed-b34e-703a9d528f03}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,69 @@
+/*
+	Created by Bernardino Frola - ISISLab - University of Salerno.
+	7th Jan 09
+*/
+
+#pragma once
+
+/**
+	YourOwnPlugIn, plugIn template for CrowdSteer library
+*/
+template <class Super>
+class YourOwnPlugIn: public Super, public CrowdEnginePlugIn
+{
+public:
+	// /////////////////////////////////////////////////////
+	// Constructor/Descructor
+
+	/// XXX install/unistall plugin shoulde be automatic
+	YourOwnPlugIn() { CrowdEnginePlugIn::installPlugIn(); }
+	~YourOwnPlugIn() { CrowdEnginePlugIn::uninstallPlugIn(); }
+	
+	const std::string name() { return "PlugInName_forDependecies"; }	
+
+	const DependenciesList plugInDependencies() 
+	{ 
+		DependenciesList dependencies;
+		dependencies.push_back("CrowdEngineBase");
+		// Put here other dependecies
+		return dependencies;	
+	}
+
+	// ////////////////////////////////////////////////////
+	// Methods
+private:
+	/// @override
+	void install();
+	
+	/// @override
+	void uninstall();
+
+public:
+	
+	// ////////////////////////////////////////////////////
+	// Fields	
+protected:
+	// PlugIn data
+};
+
+// --------------------------------------------------------------
+// --------------------------------------------------------------
+// --------------------------------------------------------------
+// Implementation
+
+template <class Super>
+void YourOwnPlugIn<Super>::install()
+{
+	// Instantiate here the plugIn data
+}
+
+// --------------------------------------------------------------
+
+template <class Super>
+void YourOwnPlugIn<Super>::uninstall()
+{
+	// Destroy here the plugIn data
+}
+
+// --------------------------------------------------------------
+// --------------------------------------------------------------

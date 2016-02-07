@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{c6bb4efa-0553-49a5-9d6e-5d8d4306e62e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="src\OpenSteer">
+      <UniqueIdentifier>{f4bf3d47-28be-4bf6-bcc2-05a081e4bfb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{c908d2cd-ee8e-47a1-9490-fce253097694}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="plugins">
+      <UniqueIdentifier>{625d0f96-7048-4160-83eb-87682c77844b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{cbb54e2f-ae9b-4944-94fe-2c3129d071c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\OpenSteer">
+      <UniqueIdentifier>{893f6e2e-e0e6-4631-8d34-f388412db0d0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\OpenSteerDemo.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\UserInteraction.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Camera.cpp">
+      <Filter>src\OpenSteer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clock.cpp">
+      <Filter>src\OpenSteer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Draw.cpp">
+      <Filter>src\OpenSteer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\lq.c">
+      <Filter>src\OpenSteer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Pathway.cpp">
+      <Filter>src\OpenSteer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\PlugIn.cpp">
+      <Filter>src\OpenSteer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SimpleVehicle.cpp">
+      <Filter>src\OpenSteer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vec3.cpp">
+      <Filter>src\OpenSteer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\plugins\BehaveRT_Clustering.cpp">
+      <Filter>plugins</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OpenSteerDemo.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\UserInteraction.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenSteer\AbstractVehicle.h">
+      <Filter>include\OpenSteer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenSteer\Annotation.h">
+      <Filter>include\OpenSteer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenSteer\Camera.h">
+      <Filter>include\OpenSteer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenSteer\Clock.h">
+      <Filter>include\OpenSteer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenSteer\Draw.h">
+      <Filter>include\OpenSteer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenSteer\LocalSpace.h">
+      <Filter>include\OpenSteer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenSteer\lq.h">
+      <Filter>include\OpenSteer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenSteer\Obstacle.h">
+      <Filter>include\OpenSteer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenSteer\OpenSteerDemo.h">
+      <Filter>include\OpenSteer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenSteer\Pathway.h">
+      <Filter>include\OpenSteer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenSteer\PlugIn.h">
+      <Filter>include\OpenSteer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenSteer\Proximity.h">
+      <Filter>include\OpenSteer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenSteer\SimpleVehicle.h">
+      <Filter>include\OpenSteer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenSteer\SteerLibrary.h">
+      <Filter>include\OpenSteer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenSteer\Utilities.h">
+      <Filter>include\OpenSteer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenSteer\Vec3.h">
+      <Filter>include\OpenSteer</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
